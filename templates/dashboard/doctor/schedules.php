@@ -1,0 +1,48 @@
+<?php
+/**
+ * Dashboard - Doctor Schedule
+ */
+
+defined( 'ABSPATH' ) || exit;
+
+global $doctor;
+
+?>
+
+<div class="schedule-timing">
+    <div class="title-box clearfix">
+        <div class="text pull-left">
+            <h3>Doctor Schedule</h3>
+        </div>
+        <div class="right-column pull-right">
+            <span>Search Event</span>
+            <form action="schedule-timing.html" method="post" class="search-form">
+                <div class="form-group">
+                    <input type="search" name="search-field" placeholder="Event title" required="">
+                    <button type="submit"><i class="far fa-search"></i></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="inner-box">
+        <div class="inner">
+            <div class="calendar-title clearfix">
+                <div class="text pull-left">
+                    <h3>Calendar</h3>
+                </div>
+                <div class="btn-box pull-right">
+                    <a href="schedule-timing.html" class="theme-btn-one">Add Event<i class="icon-image"></i></a>
+                </div>
+            </div>
+            <div class="calendar-inner">
+                <div class="today-box"><a href="schedule-timing.html">Today</a></div>
+                <ul class="date-zone clearfix">
+                    <li><a href="schedule-timing.html">Month</a></li>
+                    <li><a href="schedule-timing.html">Week</a></li>
+                    <li><a href="schedule-timing.html">Day</a></li>
+                </ul>
+                <div class="monthly" id="appoinment_calendar"><div class="monthly-header"><div class="monthly-header-title">January 2021</div><a href="#" class="monthly-prev"></a><a href="#" class="monthly-next"></a></div><div class="monthly-day-title-wrap"><div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div></div><div class="monthly-day-wrap"><div class="monthly-week"><div class="m-d monthly-day-blank"><div class="monthly-day-number"></div></div><div class="m-d monthly-day-blank"><div class="monthly-day-number"></div></div><div class="m-d monthly-day-blank"><div class="monthly-day-number"></div></div><div class="m-d monthly-day-blank"><div class="monthly-day-number"></div></div><div class="m-d monthly-day-blank"><div class="monthly-day-number"></div></div><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="1"><div class="monthly-day-number">1</div><div class="monthly-indicator-wrap"></div></a><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="2"><div class="monthly-day-number">2</div><div class="monthly-indicator-wrap"></div></a></div><div class="monthly-week"><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="3"><div class="monthly-day-number">3</div><div class="monthly-indicator-wrap"></div></a><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="4"><div class="monthly-day-number">4</div><div class="monthly-indicator-wrap"></div></a><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="5"><div class="monthly-day-number">5</div><div class="monthly-indicator-wrap"></div></a><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="6"><div class="monthly-day-number">6</div><div class="monthly-indicator-wrap"></div></a><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="7"><div class="monthly-day-number">7</div><div class="monthly-indicator-wrap"></div></a><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="8"><div class="monthly-day-number">8</div><div class="monthly-indicator-wrap"></div></a><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="9"><div class="monthly-day-number">9</div><div class="monthly-indicator-wrap"></div></a></div><div class="monthly-week"><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="10"><div class="monthly-day-number">10</div><div class="monthly-indicator-wrap"></div></a><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="11"><div class="monthly-day-number">11</div><div class="monthly-indicator-wrap"></div></a><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="12"><div class="monthly-day-number">12</div><div class="monthly-indicator-wrap"></div></a><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick monthly-today" data-number="13"><div class="monthly-day-number">13</div><div class="monthly-indicator-wrap"></div></a><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="14"><div class="monthly-day-number">14</div><div class="monthly-indicator-wrap"></div></a><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="15"><div class="monthly-day-number">15</div><div class="monthly-indicator-wrap"></div></a><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="16"><div class="monthly-day-number">16</div><div class="monthly-indicator-wrap"></div></a></div><div class="monthly-week"><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="17"><div class="monthly-day-number">17</div><div class="monthly-indicator-wrap"></div></a><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="18"><div class="monthly-day-number">18</div><div class="monthly-indicator-wrap"></div></a><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="19"><div class="monthly-day-number">19</div><div class="monthly-indicator-wrap"></div></a><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="20"><div class="monthly-day-number">20</div><div class="monthly-indicator-wrap"></div></a><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="21"><div class="monthly-day-number">21</div><div class="monthly-indicator-wrap"></div></a><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="22"><div class="monthly-day-number">22</div><div class="monthly-indicator-wrap"></div></a><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="23"><div class="monthly-day-number">23</div><div class="monthly-indicator-wrap"></div></a></div><div class="monthly-week"><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="24"><div class="monthly-day-number">24</div><div class="monthly-indicator-wrap"></div></a><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="25"><div class="monthly-day-number">25</div><div class="monthly-indicator-wrap"></div></a><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="26"><div class="monthly-day-number">26</div><div class="monthly-indicator-wrap"></div></a><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="27"><div class="monthly-day-number">27</div><div class="monthly-indicator-wrap"></div></a><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="28"><div class="monthly-day-number">28</div><div class="monthly-indicator-wrap"></div></a><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="29"><div class="monthly-day-number">29</div><div class="monthly-indicator-wrap"></div></a><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="30"><div class="monthly-day-number">30</div><div class="monthly-indicator-wrap"></div></a></div><div class="monthly-week"><a href="#" data-toggle="modal" data-target="#schedule-box" class="m-d monthly-day monthly-day-pick" data-number="31"><div class="monthly-day-number">31</div><div class="monthly-indicator-wrap"></div></a><div class="m-d monthly-day-blank"><div class="monthly-day-number"></div></div><div class="m-d monthly-day-blank"><div class="monthly-day-number"></div></div><div class="m-d monthly-day-blank"><div class="monthly-day-number"></div></div><div class="m-d monthly-day-blank"><div class="monthly-day-number"></div></div><div class="m-d monthly-day-blank"><div class="monthly-day-number"></div></div><div class="m-d monthly-day-blank"><div class="monthly-day-number"></div></div></div></div><div class="monthly-event-list"></div></div>
+            </div>
+        </div>
+    </div>
+</div>

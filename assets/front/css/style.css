@@ -1,0 +1,234 @@
+/**
+ * Front CSS
+ */
+
+@import "font-awesome-all.css";
+@import "html-flaticon.css";
+@import "bootstrap.css";
+/*@import "jquery.fancybox.min.css";*/
+@import "html-color.css";
+@import "html-style.css";
+@import "responsive.css";
+
+
+.csf-field {
+    padding: 20px 0;
+}
+
+select.csf-hide-select.hidden {
+    display: none;
+}
+
+.csf-field h4 {
+    font-size: 16px;
+}
+
+.csf-field input {
+    border: 1px solid #cecece;
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.csf-field input:active,
+.csf-field input:focus {
+    border: 1px solid #39cabb;
+}
+
+.csf-field .button {
+    background: #39cabb;
+    color: #f1f1f1;
+    font-size: 16px;
+    line-height: 26px;
+    border-radius: 100px;
+    border: none;
+    transition: 0.3s;
+    padding: 5px 12px 7px;
+}
+
+.csf-field .button:hover,
+.csf-field .button:active {
+    border: none;
+    background: #453f85;
+}
+
+
+.single-doctor .content-area,
+.single-patient .content-area,
+.single-clinic .content-area {
+    background: #ebf7f6;
+}
+
+.docpro-notice {
+    background: #ededed;
+    margin-top: 30px;
+    padding: 10px;
+    border-left: 5px solid;
+    border-color: #453f85;
+    color: #453f85;
+}
+
+.docpro-notice.notice-error {
+    border-color: #e91e63;
+    color: #e91e63;
+}
+
+.docpro-notice.notice-success {
+    border-color: #009688;
+    color: #009688;
+}
+
+.docpro-notice > p {
+    margin: 0;
+    color: inherit;
+    font-size: 14px;
+}
+
+.docpro-notice > p > a,
+.docpro-notice > p > a:active,
+.docpro-notice > p > a:focus,
+.docpro-notice > p > a:visited {
+    background: #5d5d5d;
+    font-size: 80%;
+    padding: 3px 10px;
+    border-radius: 50px;
+    color: #fff;
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+.docpro-appointment-action {
+    cursor: pointer;
+}
+
+.docpro-appointment-files {
+    background: #fff !important;
+    border-radius: 0 !important;
+}
+
+.docpro-appointment-files > span {
+    margin-right: 5px;
+    border: 1px solid #afafaf;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.docpro-appointment-files > span > img {
+    max-width: 56px;
+    width: 56px;
+}
+
+.doctors-dashboard .right-panel .appointment-list .single-item .inner .confirm-list li.docpro-appointment-status {
+    border-radius: 3px;
+    background: #fff;
+    color: #696969;
+    margin-right: 10px;
+    border: 1px solid #696969;
+    cursor: pointer;
+}
+
+.doctors-dashboard .right-panel .appointment-list .single-item .inner .confirm-list li.docpro-appointment-payment {
+    background: none;
+    border-radius: 0;
+}
+
+.doctors-dashboard .right-panel .appointment-list .single-item .inner .confirm-list li.docpro-appointment-payment > p {
+    margin: 0 0 8px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    min-width: 280px;
+}
+
+
+.appointment-files > div {
+    max-width: 54px;
+    padding: 0 !important;
+}
+
+.appointment-files > div > img {
+    cursor: pointer;
+}
+
+.docpro-appointment-files-save,
+.appointment-files-button {
+    background: #efefef;
+    text-align: center;
+    font-size: 13px;
+    padding: 4px;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+
+/**
+ * For Theme
+ */
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px !important;
+    }
+}
+
+.wpbstarter-page-title-area {
+    padding: 52px 0 48px 0 !important;
+    background-color: #453f85 !important;
+}
+
+.wpbstarter-page-title-area:before {
+    position: absolute;
+    content: ' ';
+    left: 100px;
+    top: 0;
+    width: 281px;
+    height: 111px;
+    background-repeat: no-repeat;
+    background-image: url("../../images/shape/shape-70.png");
+}
+
+.wpbstarter-page-title-area:after {
+    position: absolute;
+    content: ' ';
+    right: 80px;
+    bottom: 0;
+    width: 279px;
+    height: 111px;
+    background-repeat: no-repeat;
+    background-image: url("../../images/shape/shape-71.png");
+}
+
+.wpbstarter-page-title-area .blog-entry-meta {
+    display: none;
+}
+
+.wpbstarter-content-area-padding {
+    padding: 0 !important;
+}
+
+.clinic-section {
+    padding: 20px 0;
+}
+
+
+.docpro-table tr th {
+    background-color: #fff !important;
+}
+
+.docpro-remove_fav {
+    position: absolute;
+    z-index: 99;
+    top: 10px;
+    left: 10px;
+    background: #e91e63;
+    color: #fff;
+    border-radius: 80px;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 2px 12px;
+    cursor: pointer;
+}

@@ -1,0 +1,28 @@
+/**
+ * Admin CSS
+ */
+
+
+.csf-profile-options > .csf-field {
+    max-width: 960px;
+}
+
+.csf-field.disabled input {
+    pointer-events: none;
+    background: #f5f5f5;
+}
+
+.docpro-rating {
+    margin: 0;
+    padding: 0;
+}
+
+.docpro-rating > li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.docpro-rating > li .dashicons-star-filled {
+    color: #FF9800;
+}
