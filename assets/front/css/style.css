@@ -219,11 +219,21 @@ select.csf-hide-select.hidden {
     background-color: #fff !important;
 }
 
+
 .docpro-remove_fav {
     position: absolute;
     z-index: 99;
     top: 10px;
     left: 10px;
+    background: #e91e63;
+    color: #fff;
+    border-radius: 80px;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 2px 12px;
+    cursor: pointer;
+}
+.docpro-remove-booking{
     background: #e91e63;
     color: #fff;
     border-radius: 80px;

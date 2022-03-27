@@ -7,8 +7,6 @@ defined( 'ABSPATH' ) || exit;
 
 global $patient;
 
-$bookings = $patient->get_booking_ids();
-
 
 //update_post_meta( 148, '_files', array( 149, 150 ) );
 
@@ -23,18 +21,23 @@ $bookings = $patient->get_booking_ids();
                 <table class="doctors-table">
                     <thead class="table-header">
                     <tr>
+                        <th></th>
                         <th><?php esc_html_e( 'Doctor Name', 'docpro' ); ?></th>
                         <th><?php esc_html_e( 'Date', 'docpro' ); ?></th>
                         <th><?php esc_html_e( 'Service', 'docpro' ); ?></th>
                         <th><?php esc_html_e( 'Status', 'docpro' ); ?></th>
                         <th><?php esc_html_e( 'Amount', 'docpro' ); ?></th>
                         <th><?php esc_html_e( 'Files', 'docpro' ); ?></th>
+                        <th></th>
                     </tr>
                     </thead>
                     <tbody>
 
-					<?php foreach ( $bookings as $booking_id ) : $booking = docpro_get_booking( $booking_id ); ?>
+					<?php foreach ( $patient->get_booking_ids() as $booking_id ) : $booking = docpro_get_booking( $booking_id ); ?>
                         <tr>
+                            <td>
+                                <span class="docpro-remove-booking" data-id="<?php echo esc_attr( $booking_id ); ?>"><?php esc_html_e( 'Cancel', 'docpro' ); ?></span>
+                            </td>
                             <td>
                                 <div class="name-box">
 									<?php printf( '<figure class="image"><img src="%s" alt="%s"></figure>', $booking->doctor->get_avatar_url(), $booking->doctor->display_name ); ?>

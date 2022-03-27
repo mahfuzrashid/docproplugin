@@ -35,6 +35,29 @@ if ( ! class_exists( 'DOCPRO_Hooks' ) ) {
 			add_action( 'wp_ajax_save_appointment_files', array( $this, 'save_appointment_files' ) );
 			add_filter( 'account_lock_message', array( $this, 'update_account_lock_message' ) );
 			add_action( 'wp_ajax_remove_favourite_item', array( $this, 'remove_favourite_item' ) );
+			add_action( 'wp_ajax_remove_booking_item', array( $this, 'remove_booking_item' ) );
+		}
+
+		function remove_booking_item() {
+
+			$booking_id = isset( $_POST['booking_id'] ) ? sanitize_text_field( $_POST['booking_id'] ) : '';
+
+			if ( ! is_user_logged_in() || empty( $booking_id ) ) {
+				wp_send_json_error();
+			}
+
+			$response = wp_update_post(
+				array(
+					'ID'          => $booking_id,
+					'post_status' => 'trash',
+				)
+			);
+
+			if ( $response ) {
+				wp_send_json_success();
+			}
+
+			wp_send_json_error();
 		}
 
 		/**

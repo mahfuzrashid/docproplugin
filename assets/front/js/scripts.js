@@ -10,6 +10,40 @@
     });
 
 
+    // Remove Booking
+    $(document).on('click', '.docpro-remove-booking', function () {
+
+        let elRemoveButton = $(this),
+            bookingID = elRemoveButton.data('id'),
+            buttonText = elRemoveButton.html();
+
+        if (confirm(pluginObject.confirmText)) {
+
+            elRemoveButton.html(pluginObject.working);
+
+            $.ajax({
+                type: 'POST',
+                context: this,
+                url: pluginObject.ajaxurl,
+                data: {
+                    'action': 'remove_booking_item',
+                    'booking_id': bookingID,
+                },
+                success: function (response) {
+                    if (response.success) {
+                        window.location.reload();
+                    } else {
+                        elRemoveButton.html(buttonText);
+                    }
+                },
+                error: function () {
+                    elRemoveButton.html(buttonText);
+                }
+            });
+        }
+    });
+
+
     // Remove Favourite
     $(document).on('click', '.docpro-remove_fav', function () {
 
